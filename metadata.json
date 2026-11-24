@@ -1,0 +1,6 @@
+{
+  "name": "القرآن الكريم - المصحف الإلكتروني الشامل",
+  "description": "منصة إسلامية متكاملة لتلاوة وتدبر القرآن الكريم برواية حفص عن عاصم، مع استماع لكبار القراء والبحث في السور والآيات وحفظ العلامات المرجعية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

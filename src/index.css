@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #FAFAF6;
+    --bg-card: #FFFFFF;
+    --bg-muted: #F2F4F0;
+    --text-main: #242B28;
+    --text-muted: #6A7570;
+    --border-color: #E2E8E1;
+    --primary: #145C46;
+    --primary-light: #1E7558;
+    --primary-dark: #0D3F30;
+    --accent: #C5A45D;
+    --accent-light: #DFCA92;
+  }
+
+  .dark {
+    --bg-main: #0E1613;
+    --bg-card: #16221E;
+    --bg-muted: #1E2D27;
+    --text-main: #F0F5F2;
+    --text-muted: #95A39B;
+    --border-color: #24352D;
+    --primary: #1E7558;
+    --primary-light: #2A9C77;
+    --primary-dark: #145C46;
+    --accent: #D6B366;
+    --accent-light: #EAD69E;
+  }
+
+  body {
+    font-family: 'Tajawal', 'Cairo', system-ui, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  a[href],
+  select:not(:disabled),
+  input[type="range"]:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.font-quran {
+  font-family: 'Amiri Quran', 'Amiri', serif;
+  line-height: 2.4;
+  word-spacing: 0.15em;
+}
+
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-ui {
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 92, 70, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 92, 70, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(214, 179, 102, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 179, 102, 0.4);
+}
+
+/* Islamic frame & pattern accents */
+.bg-islamic-pattern {
+  background-image: radial-gradient(rgba(20, 92, 70, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-islamic-pattern {
+  background-image: radial-gradient(rgba(214, 179, 102, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
